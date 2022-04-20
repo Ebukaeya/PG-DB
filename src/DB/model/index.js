@@ -1,1 +1,1 @@
-/* define relation betwwen models or tables */
+/* define relation betwwen models or tables and export them as one*/

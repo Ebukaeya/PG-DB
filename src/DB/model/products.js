@@ -7,17 +7,17 @@ const sequelize = new Sequelize(process.env.PGDATABASE, process.env.PGUSER, proc
     dialect: "postgres",
   });
 
-const Product = new sequelize.define("product",
+const Product = sequelize.define("product",
 {
     "id": {
         primaryKey: true,
-        type: DataTypes.STRING.UUID,
+        type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4
     },
     "name": DataTypes.STRING,
     "category":DataTypes.STRING,
     "description": DataTypes.TEXT,
-    "image": DataTypes.url,
+    "image": DataTypes.STRING,
     "price": DataTypes.FLOAT
 }
 )
