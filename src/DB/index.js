@@ -1,10 +1,10 @@
-
 import { Sequelize } from "sequelize";
+import Product from "./model/products.js";
 
 const pass = process.env.PGPASSWORD
 
 
-const sequelize = new Sequelize(process.env.PGDATABASE, process.env.PGUSER, pass, {
+export const sequelize = new Sequelize(process.env.PGDATABASE, process.env.PGUSER, pass, {
   host: "localhost",
   dialect: "postgres",
 });
@@ -17,5 +17,10 @@ const dBConnet = async () => {
       console.log(error);
   }
 };
+
+export const synDB = async()=>{
+
+
+}
 
 export default dBConnet
