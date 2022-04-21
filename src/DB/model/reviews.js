@@ -1,10 +1,7 @@
-/* import { sequelize } from "../index.js"; */
+import sequelize from "../index.js";
 import { DataTypes } from "sequelize";
-import sequelize from "../index.js"
 
-
-
-const Product = sequelize.define("product", {
+const Review = sequelize.define("review", {
   id: {
     primaryKey: true,
     type: DataTypes.UUID,
@@ -17,4 +14,4 @@ const Product = sequelize.define("product", {
   price: DataTypes.FLOAT,
 });
 
-export default Product;
+export default Review;
