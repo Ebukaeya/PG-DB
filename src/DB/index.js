@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 
+/* make sure u instantaite one instance of the sequuelize obj. */
 
 /* initiate the sequelize object ,
  * connect todb
@@ -28,7 +29,7 @@ export const dBConnet = async () => {
 
 export const synDB = async () => {
   try {
-    await sequelize.sync();
+    await sequelize.sync(/* {force:true} */);
     console.log("All models were synchronized successfully.");
     /* Product.sync() */
   } catch (error) {

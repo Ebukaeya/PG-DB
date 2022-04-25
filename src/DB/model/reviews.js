@@ -7,11 +7,9 @@ const Review = sequelize.define("review", {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
   },
-  name: { type: DataTypes.STRING, allowNull: false },
-  category: DataTypes.STRING,
-  description: DataTypes.TEXT,
-  image: DataTypes.STRING,
-  price: DataTypes.FLOAT,
+  text: { type: DataTypes.TEXT, allowNull: false },
+  username: DataTypes.STRING,
+  
 });
 
 export default Review;
